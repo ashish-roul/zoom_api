@@ -3,6 +3,7 @@ import requests
 import json
 from time import time
 from config import *
+event = {"httpMethod": "POST"}
 
 
 def lambda_handler(event):
