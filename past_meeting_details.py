@@ -10,6 +10,7 @@ def lambda_handler(event):
         #event_body = event["body"]
         #py_body = json.loads(event_body)
         meeting_uuid = 'MPDe2P9nS+ODnS0VFdhnhw=='  # py_body.get("meetingId")
+        #uuid = urlencode(meeting_uuid)
         token = generate_token()
         meeting_data = past_meeting_details(meeting_uuid, token)
         if meeting_data.status_code == 200:
