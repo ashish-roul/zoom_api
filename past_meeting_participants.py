@@ -9,7 +9,7 @@ def lambda_handler(event):
     if event["httpMethod"] == "POST":
         # event_body = event["body"]
         # py_body = json.loads(event_body)
-        meeting_uuid = 'MPDe2P9nS+ODnS0VFdhnhw=='  # py_body.get("meetingUUID")
+        meeting_uuid = '9WUAwRttT2WT5OXcsbDmdA=='  # py_body.get("meetingUUID")
         token = generate_token()
         participants_data = pastMeetingParticipants(meeting_uuid, token)
         if participants_data.status_code == 200:

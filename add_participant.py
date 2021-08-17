@@ -34,7 +34,7 @@ def lambda_handler(event):
     if event["httpMethod"] == "POST":
         event_body = event["body"]
         py_body = event_body
-        meeting_id =98807411362  # py_body.get("meetingId")
+        meeting_id = 84092050644  # py_body.get("meetingId")
         token = generate_token()
         meeting_data = addParticipants(meeting_id, token, py_body)
         if meeting_data.status_code == 201:
@@ -71,7 +71,7 @@ def addParticipants(meeting_id, token, py_body):
                              )
     print(response.status_code)
     user = response.json()
-    print("user", user)
+    print(user)
     return response
 
 
