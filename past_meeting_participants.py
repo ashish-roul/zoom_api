@@ -3,7 +3,9 @@ import requests
 import json
 from time import time
 from config import *
+
 event = {"httpMethod": "POST"}
+
 
 def lambda_handler(event):
     if event["httpMethod"] == "POST":
@@ -40,9 +42,9 @@ def generate_token():
 
 def pastMeetingParticipants(meeting_uuid, token):
     response = requests.get('https://api.zoom.us/v2/past_meetings/{}/participants'.format(meeting_uuid),
-                     headers={'authorization': 'Bearer ' + token,
-                              'content-type': 'application/json'}
-                     )
+                            headers={'authorization': 'Bearer ' + token,
+                                     'content-type': 'application/json'}
+                            )
     print(response.status_code)
     user = response.json()
     print("user", user)

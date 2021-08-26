@@ -30,6 +30,7 @@ event = {"httpMethod": "POST",
                   }
          }
 
+
 def lambda_handler(event):
     if event["httpMethod"] == "POST":
         event_body = event["body"]
